@@ -2,7 +2,7 @@ name: Deploy React to GitHub Pages
 
 on:
   push:
-    branches: [dev]     
+    branches: [dev]         
   workflow_dispatch:
 
 permissions:
@@ -28,8 +28,13 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      # SPA yönlendirme (React Router)
       - run: cp build/index.html build/404.html
+
+      # Custom domain (dev ortamı)
       - run: echo "dev.softfixes.com" > build/CNAME
+
+      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
