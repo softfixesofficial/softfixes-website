@@ -5,7 +5,7 @@
 		"start:tagmanager": "npm --prefix tagmanager/landing start",
 		"dev": "concurrently \"npm --prefix landing start\" \"npm --prefix tagmanager/landing start\"",
 		"install:all": "npm --prefix landing install && npm --prefix tagmanager/landing install",
-		"build": "cd landing && npm run build",
+		"build": "cd landing && npx react-scripts build",
 		"build:tagmanager": "cd tagmanager/landing && npm run build"
 	},
 	"dependencies": {
