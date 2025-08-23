@@ -1,6 +1,8 @@
 // Clean and simple About page with company information and values.
 import React from "react";
 
+const TAGMANAGER_URL = process.env.CLICKUP_REDIRECT_URI;
+
 function About() {
   return (
     <div>
@@ -103,7 +105,7 @@ function About() {
               This experience taught us the importance of building solutions that truly understand user workflows.
             </p>
             <a 
-              href="https://tagmanager.softfixes.com" 
+              href={TAGMANAGER_URL} 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-primary"

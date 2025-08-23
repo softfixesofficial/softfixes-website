@@ -1,6 +1,8 @@
 // Clean and simple home page with focused content and clear messaging.
 import React from "react";
 
+const TAGMANAGER_URL = process.env.CLICKUP_REDIRECT_URI;
+
 function Home() {
   return (
     <div>
@@ -19,7 +21,7 @@ function Home() {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a 
-                href="https://tagmanager.softfixes.com" 
+                href={TAGMANAGER_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -101,7 +103,7 @@ function Home() {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a 
-                href="https://tagmanager.softfixes.com" 
+                href={TAGMANAGER_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary"

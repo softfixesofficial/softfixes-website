@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.6.2"
-  }
+	"private": true,
+	"scripts": {
+		"start": "npm --prefix landing start",
+		"start:tagmanager": "npm --prefix tagmanager/landing start",
+		"dev": "concurrently \"npm --prefix landing start\" \"npm --prefix tagmanager/landing start\"",
+		"install:all": "npm --prefix landing install && npm --prefix tagmanager/landing install",
+		"build": "npm --prefix landing run build",
+		"build:tagmanager": "npm --prefix tagmanager/landing run build"
+	},
+	"dependencies": {
+		"react-router-dom": "^7.6.2"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2"
+	}
 }

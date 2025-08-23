@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Manager Plugin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/tag-details.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center; margin-top:2rem; margin-bottom:1.5rem; color:#4f8cff; font-size:2.2rem; font-weight:700; letter-spacing:-1px;">Tag Manager</h1>
+    </header>
+    <main id="tag-manager" class="tag-manager">
+        <div class="tag-manager-header">
+            <!-- Header section (can include actions) -->
+        </div>
+        <div class="tag-manager-grid" style="grid-template-columns: 1fr 2fr; grid-template-rows: auto;">
+            <!-- Left: Active Tags Panel -->
+            <section class="panel panel-search-active">
+                <div class="panel-title">Tags</div>
+                <div class="search-container">
+                    <input type="text" id="tag-search" placeholder="Search tags..." class="search-input">
+                </div>
+                <div class="active-tags-list" id="active-tags-list">
+                    <!-- Active tags will be rendered here -->
+                </div>
+            </section>
+            <!-- Right: Details + Fake Data + Inactive Tags -->
+            <section class="panel panel-right-stack" style="display: flex; flex-direction: column; gap: 1.2rem; background: none; box-shadow: none; border: none; padding: 0;">
+                <!-- Tag Details Panel -->
+                <div class="panel panel-details-mini">
+                    <div class="panel-title">Tag Details</div>
+                    <div id="tag-details" class="tag-details">
+                        <div class="no-selection-message">Select a tag</div>
+                    </div>
+                </div>
+                <!-- Fake Data Panel -->
+                <div class="panel panel-fake-data">
+                    <div class="panel-title">Data</div>
+                    <div id="tagged-items">
+                        <!-- Fake data will be rendered here -->
+                    </div>
+                </div>
+                <!-- Inactive Tags Panel -->
+                <div class="panel panel-inactive">
+                    <div class="panel-title">Inactive Tags</div>
+                    <div class="inactive-tags-list" id="inactive-tags-list">
+                        <!-- Inactive tags will be rendered here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal for mass actions -->
+    <div id="mass-actions-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mass Tag Actions</h3>
+                <button class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted based on action type -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 

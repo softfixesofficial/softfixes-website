@@ -1,5 +1,6 @@
 // Clean and simple products page featuring Tag Manager and other solutions.
 import React from "react";
+const TAGMANAGER_URL = process.env.CLICKUP_REDIRECT_URI;
 
 function Products() {
   return (
@@ -56,7 +57,7 @@ function Products() {
                   Access and manage tags across all your applications from a single, intuitive dashboard.
                 </p>
                 <a 
-                  href="https://tagmanager.softfixes.com" 
+                  href={TAGMANAGER_URL} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary" 
@@ -94,9 +95,7 @@ function Products() {
                   Complete solution architecture:
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.85rem" }}>
-                  <div>🌐 <strong>Website + Auth:</strong> tagmanager.softfixes.com</div>
-                  <div>🚀 <strong>Dashboard:</strong> api.tagmanager.softfixes.com</div>
-                  <div>📚 <strong>Documentation:</strong> docs.tagmanager.softfixes.com</div>
+                  <div>🌐 <strong>Website + Auth:</strong> {TAGMANAGER_URL?.replace('https://', '') || 'tagmanager.softfixes.com'}</div>
                 </div>
                 <p style={{ fontSize: "0.8rem", color: "#94a3b8", marginTop: "1rem", fontStyle: "italic" }}>
                   Login on the website → Get redirected to dashboard
