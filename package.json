@@ -5,8 +5,8 @@
 		"start:tagmanager": "npm --prefix tagmanager/landing start",
 		"dev": "concurrently \"npm --prefix landing start\" \"npm --prefix tagmanager/landing start\"",
 		"install:all": "npm --prefix landing install && npm --prefix tagmanager/landing install",
-		"build": "npm --prefix landing run build",
-		"build:tagmanager": "npm --prefix tagmanager/landing run build"
+		"build": "cd landing && npm run build",
+		"build:tagmanager": "cd tagmanager/landing && npm run build"
 	},
 	"dependencies": {
 		"react-router-dom": "^7.6.2"
