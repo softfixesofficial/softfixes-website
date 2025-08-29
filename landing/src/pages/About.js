@@ -2,7 +2,6 @@
 import React from "react";
 
 const TAGMANAGER_URL = process.env.REACT_APP_CLICKUP_REDIRECT_URI;
-console.log('About TAGMANAGER_URL:', TAGMANAGER_URL);
 
 function About() {
   return (
