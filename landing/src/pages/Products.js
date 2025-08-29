@@ -1,6 +1,7 @@
 // Clean and simple products page featuring Tag Manager and other solutions.
 import React from "react";
-const TAGMANAGER_URL = process.env.CLICKUP_REDIRECT_URI;
+const TAGMANAGER_URL = process.env.REACT_APP_CLICKUP_REDIRECT_URI;
+console.log('Products TAGMANAGER_URL:', TAGMANAGER_URL);
 
 function Products() {
   return (
