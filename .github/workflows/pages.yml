@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
       - run: cd landing && npm ci
       - run: npm run build
+        env:
+          REACT_APP_CLICKUP_REDIRECT_URI: ${{ secrets.REACT_APP_CLICKUP_REDIRECT_URI }}
 
       # Custom domain (dev ortamı)
       - run: echo "dev.softfixes.com" > landing/build/CNAME
