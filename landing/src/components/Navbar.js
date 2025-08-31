@@ -6,7 +6,9 @@ import "../styles/navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">SoftFixes</div>
+      <div className="navbar-logo">
+        <img src="/soffixes_logo.png" alt="SoftFixes" className="logo-image" />
+      </div>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
