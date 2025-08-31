@@ -17,32 +17,27 @@ function Products() {
         </div>
       </section>
 
-      {/* Featured Product - Tag Manager */}
-      <section className="section" style={{ background: "linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%)" }}>
+      {/* Tag Manager Product */}
+      <section className="section">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <div style={{
               display: "inline-flex",
               alignItems: "center",
-              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+              background: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
               color: "white",
               padding: "0.75rem 1.5rem",
               borderRadius: "50px",
               fontSize: "0.9rem",
-              fontWeight: 600,
-              boxShadow: "0 4px 15px rgba(16, 185, 129, 0.3)",
+              fontWeight: "600",
               marginBottom: "2rem"
             }}>
-              <span style={{ marginRight: "0.5rem" }}>🚀</span>
-              Our Flagship Product
+              🚀 Our Main Product
             </div>
             <h2 style={{ 
               fontSize: "3rem", 
               marginBottom: "1.5rem",
-              background: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text"
+              color: "#f8fafc"
             }}>
               Tag Manager
             </h2>
@@ -53,7 +48,7 @@ function Products() {
               margin: "0 auto",
               lineHeight: "1.6"
             }}>
-              Streamline your tag management across multiple applications. Login once, manage everywhere with our powerful unified dashboard.
+              Manage all your application tags from one place. Simple, fast, and efficient.
             </p>
           </div>
 
@@ -65,41 +60,34 @@ function Products() {
             maxWidth: "1200px",
             margin: "0 auto"
           }}>
+            {/* Left Side - Product Card */}
             <div>
               <div className="card" style={{
                 background: "rgba(255, 255, 255, 0.03)",
                 border: "1px solid rgba(255, 255, 255, 0.1)",
-                borderRadius: "20px",
+                borderRadius: "16px",
                 padding: "3rem",
-                backdropFilter: "blur(10px)",
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease"
+                textAlign: "center"
               }}>
                 <div style={{ 
-                  fontSize: "5rem", 
-                  marginBottom: "2rem", 
-                  textAlign: "center",
-                  background: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text"
+                  fontSize: "4rem", 
+                  marginBottom: "2rem"
                 }}>🏷️</div>
                 <h3 style={{ 
                   fontSize: "1.8rem", 
-                  marginBottom: "1.5rem", 
-                  textAlign: "center",
+                  marginBottom: "1.5rem",
                   color: "#f8fafc"
                 }}>
-                  Unified Tag Management
+                  What is Tag Manager?
                 </h3>
                 <p style={{ 
-                  textAlign: "center", 
                   marginBottom: "2.5rem",
                   fontSize: "1.1rem",
                   lineHeight: "1.6",
                   color: "#cbd5e1"
                 }}>
-                  Access and manage tags across all your applications from a single, intuitive dashboard with real-time synchronization.
+                  A tool that helps you organize and manage tags across all your applications. 
+                  Instead of managing tags in each app separately, you can do it all from one dashboard.
                 </p>
                 <a 
                   href={TAGMANAGER_URL} 
@@ -118,64 +106,82 @@ function Products() {
                     background: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
                     border: "none",
                     color: "white",
-                    transition: "all 0.3s ease",
-                    boxShadow: "0 4px 15px rgba(99, 102, 241, 0.3)"
+                    transition: "all 0.3s ease"
                   }}
                   onMouseOver={(e) => {
                     e.target.style.transform = "translateY(-2px)";
-                    e.target.style.boxShadow = "0 8px 25px rgba(99, 102, 241, 0.4)";
                   }}
                   onMouseOut={(e) => {
                     e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 4px 15px rgba(99, 102, 241, 0.3)";
                   }}
                 >
-                  🚀 Launch Tag Manager
+                  Try Tag Manager
                 </a>
               </div>
             </div>
 
+            {/* Right Side - Features */}
             <div>
               <h3 style={{ 
                 fontSize: "2rem", 
-                marginBottom: "2.5rem",
-                color: "#f8fafc",
-                textAlign: "center"
-              }}>Key Features</h3>
+                marginBottom: "2rem",
+                color: "#f8fafc"
+              }}>Why use Tag Manager?</h3>
+              
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {[
-                  { icon: "🔐", text: "Single Sign-On Integration", desc: "Secure authentication across all platforms" },
-                  { icon: "🎯", text: "Multi-Application Support", desc: "Manage tags from one central location" },
-                  { icon: "📊", text: "Real-time Tag Analytics", desc: "Monitor performance and usage metrics" },
-                  { icon: "⚡", text: "Bulk Tag Operations", desc: "Efficiently manage multiple tags at once" },
-                  { icon: "🔄", text: "Automated Synchronization", desc: "Keep all applications in sync automatically" },
-                  { icon: "📱", text: "Mobile-Friendly Interface", desc: "Access from any device, anywhere" }
+                  { 
+                    icon: "🔐", 
+                    title: "One Login", 
+                    desc: "Sign in once and access all your applications" 
+                  },
+                  { 
+                    icon: "🎯", 
+                    title: "Centralized Management", 
+                    desc: "Manage all tags from one dashboard" 
+                  },
+                  { 
+                    icon: "⚡", 
+                    title: "Save Time", 
+                    desc: "No more switching between different apps" 
+                  },
+                  { 
+                    icon: "📊", 
+                    title: "Better Organization", 
+                    desc: "Keep all your tags organized and searchable" 
+                  },
+                  { 
+                    icon: "🔄", 
+                    title: "Auto Sync", 
+                    desc: "Changes sync automatically across all apps" 
+                  },
+                  { 
+                    icon: "📱", 
+                    title: "Works Everywhere", 
+                    desc: "Access from your computer, tablet, or phone" 
+                  }
                 ].map((feature, index) => (
                   <div key={index} style={{
                     padding: "1.5rem",
                     background: "rgba(255, 255, 255, 0.05)",
                     borderRadius: "12px",
-                    fontSize: "1rem",
                     border: "1px solid rgba(255, 255, 255, 0.1)",
-                    transition: "all 0.3s ease",
-                    cursor: "pointer"
+                    transition: "all 0.3s ease"
                   }}
                   onMouseOver={(e) => {
                     e.target.style.background = "rgba(99, 102, 241, 0.1)";
-                    e.target.style.transform = "translateX(5px)";
                   }}
                   onMouseOut={(e) => {
                     e.target.style.background = "rgba(255, 255, 255, 0.05)";
-                    e.target.style.transform = "translateX(0)";
                   }}
                   >
                     <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                       <span style={{ fontSize: "1.5rem" }}>{feature.icon}</span>
                       <div>
                         <div style={{ fontWeight: "600", color: "#f8fafc", marginBottom: "0.25rem" }}>
-                          {feature.text}
+                          {feature.title}
                         </div>
-                        <div style={{ fontSize: "0.9rem", color: "#94a3b8" }}>
+                        <div style={{ fontSize: "0.95rem", color: "#94a3b8" }}>
                           {feature.desc}
                         </div>
                       </div>
@@ -184,53 +190,44 @@ function Products() {
                 ))}
               </div>
               
+              {/* How it works */}
               <div style={{ 
                 marginTop: "3rem", 
-                textAlign: "center",
                 padding: "2rem",
                 background: "rgba(255, 255, 255, 0.03)",
                 borderRadius: "12px",
                 border: "1px solid rgba(255, 255, 255, 0.1)"
               }}>
-                <p style={{ fontSize: "1rem", color: "#94a3b8", marginBottom: "1rem", fontWeight: "600" }}>
-                  Complete solution architecture:
-                </p>
+                <h4 style={{ 
+                  fontSize: "1.2rem", 
+                  marginBottom: "1rem",
+                  color: "#f8fafc",
+                  textAlign: "center"
+                }}>
+                  How it works
+                </h4>
                 <div style={{ 
                   display: "flex", 
-                  flexDirection: "column", 
-                  gap: "0.75rem", 
+                  alignItems: "center", 
+                  justifyContent: "center",
+                  gap: "1rem",
                   fontSize: "0.95rem",
                   color: "#cbd5e1"
                 }}>
-                  <div style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "0.5rem",
-                    justifyContent: "center"
-                  }}>
-                    <span>🌐</span>
-                    <strong>Website + Auth:</strong> 
-                    <span style={{ 
-                      background: "rgba(99, 102, 241, 0.2)", 
-                      padding: "0.25rem 0.75rem", 
-                      borderRadius: "6px",
-                      marginLeft: "0.5rem"
-                    }}>
-                      {TAGMANAGER_URL?.replace('https://', '') || 'tagmanager.softfixes.com'}
-                    </span>
-                  </div>
+                  <span>1. Login</span>
+                  <span>→</span>
+                  <span>2. Manage Tags</span>
+                  <span>→</span>
+                  <span>3. Done!</span>
                 </div>
                 <p style={{ 
                   fontSize: "0.9rem", 
                   color: "#94a3b8", 
-                  marginTop: "1.5rem", 
-                  fontStyle: "italic",
-                  padding: "1rem",
-                  background: "rgba(16, 185, 129, 0.1)",
-                  borderRadius: "8px",
-                  border: "1px solid rgba(16, 185, 129, 0.2)"
+                  marginTop: "1rem", 
+                  textAlign: "center",
+                  fontStyle: "italic"
                 }}>
-                  ✨ Login on the website → Get redirected to dashboard
+                  It's that simple. No complex setup required.
                 </p>
               </div>
             </div>
@@ -243,17 +240,17 @@ function Products() {
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
             <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
-              Need a Custom Solution?
+              Need something custom?
             </h2>
             <p style={{ marginBottom: "2rem", fontSize: "1.1rem" }}>
-              We specialize in building tailored applications that solve your unique business challenges.
+              We can build custom solutions for your specific needs.
             </p>
             <a 
               href="/contact"
               className="btn-primary" 
               style={{ fontSize: "1.1rem", padding: "1rem 2rem", textDecoration: "none" }}
             >
-              Discuss Your Project
+              Contact Us
             </a>
           </div>
         </div>
